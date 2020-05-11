@@ -1,2 +1,4 @@
 downloads/
 dataset/
+__pycache__/
+out/
