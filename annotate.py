@@ -24,9 +24,6 @@ for (i, image_path) in enumerate(image_paths):
         cnts = cv2.findContours(thresh.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
         #https://stackoverflow.com/questions/56828644/215assertion-failed-npoints-0-depth-cv-32f-depth-cv-32s-in
         cnts = cnts[0]
-
-        for i in cnts:
-            print(type(i))
         cnts = sorted(cnts,key=cv2.contourArea, reverse=True)[:4]
 
         for c in cnts:
